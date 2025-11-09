@@ -3,7 +3,7 @@ import pymysql
 from telegram import Update
 from telegram.ext import Application, CommandHandler, ContextTypes
 
-# ==== CONFIG FROM ENVIRONMENT VARIABLES ====
+# ==== CONFIG FROM ENVIRONMENT  VARIABLES ====
 DB_HOST = os.environ.get('DB_HOST', "auth-db759.hstgr.io")
 DB_USER = os.environ.get('DB_USER', "u637884065_Gsm")
 DB_PASSWORD = os.environ.get('DB_PASSWORD', "Continental12345*")
