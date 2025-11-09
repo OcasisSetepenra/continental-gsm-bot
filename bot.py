@@ -9,7 +9,7 @@ DB_USER = os.environ.get('DB_USER', "u637884065_Gsm")
 DB_PASSWORD = os.environ.get('DB_PASSWORD', "Continental12345*")
 DB_NAME = os.environ.get('DB_NAME', "u637884065_Gsm")
 DEVICES_TABLE = os.environ.get('DEVICES_TABLE', 'devices')
-BOT_TOKEN = os.environ.get('BOT_TOKEN')  # ¡OBLIGATORIO como variable de entorno!
+BOT_TOKEN = os.environ.get('BOT_TOKEN')
 
 def get_db_connection():
     return pymysql.connect(
@@ -74,6 +74,7 @@ def main():
         return
     
     application = Application.builder().token(BOT_TOKEN).build()
+    
     application.add_handler(CommandHandler("start", start))
     application.add_handler(CommandHandler("rsn", register_serial))
     application.add_handler(CommandHandler("list", list_serials))
